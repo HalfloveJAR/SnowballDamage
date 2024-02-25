@@ -1,0 +1,4 @@
+name: SnowballDamage
+version: '${project.version}'
+main: net.halflove.snowballdamage.SnowballDamage
+api-version: '1.20'
