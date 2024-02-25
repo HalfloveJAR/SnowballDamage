@@ -17,13 +17,6 @@ public class Main extends JavaPlugin implements Listener {
 
     public void onEnable() {
         Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "SBD: Snowball Damage Version: " + getDescription().getVersion() + ChatColor.GREEN + " By Halflove Enabled!");
-        Bukkit.getLogger().info("Snowball Damage Enabled");
-        if (!(new File(getDataFolder(), "config.yml")).exists()) {
-            saveDefaultConfig();
-            getConfig().set("Snowballs.Damage", 3.0D);
-            getConfig().set("Eggs.Damage", 3.0D);
-            saveConfig();
-        }
         getServer().getPluginManager().registerEvents(this, this);
         snowballDamage = getConfig().getDouble("Snowballs.Damage");
         eggDamage = getConfig().getDouble("Eggs.Damage");
